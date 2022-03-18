@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGame));
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Cooper");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Tin");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Bronze");
@@ -58,47 +57,48 @@
             System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Shaduko");
             System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Aracum");
             System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Electrum");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGame));
             this.gbStats = new System.Windows.Forms.GroupBox();
+            this.picBackExp = new System.Windows.Forms.PictureBox();
+            this.picBackSanity = new System.Windows.Forms.PictureBox();
+            this.picBackHunger = new System.Windows.Forms.PictureBox();
+            this.picExp = new System.Windows.Forms.PictureBox();
             this.lblExp = new System.Windows.Forms.Label();
+            this.picHunger = new System.Windows.Forms.PictureBox();
             this.lblSanity = new System.Windows.Forms.Label();
+            this.picSanity = new System.Windows.Forms.PictureBox();
             this.lblHunger = new System.Windows.Forms.Label();
             this.txtLog = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pMDI = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.gpForge = new System.Windows.Forms.GroupBox();
+            this.btnForge = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnAchievment = new System.Windows.Forms.Button();
             this.btnInventory = new System.Windows.Forms.Button();
             this.btnMap = new System.Windows.Forms.Button();
             this.btnQuests = new System.Windows.Forms.Button();
-            this.picBackExp = new System.Windows.Forms.PictureBox();
-            this.picBackSanity = new System.Windows.Forms.PictureBox();
-            this.picBackHunger = new System.Windows.Forms.PictureBox();
-            this.picExp = new System.Windows.Forms.PictureBox();
-            this.picHunger = new System.Windows.Forms.PictureBox();
-            this.picSanity = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.gpForge = new System.Windows.Forms.GroupBox();
-            this.btnForge = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gbStats.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.pMDI.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackExp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBackSanity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBackHunger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHunger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSanity)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.pMDI.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.gpForge.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbStats
@@ -122,6 +122,42 @@
             this.gbStats.TabStop = false;
             this.gbStats.Text = "{PlayerName} | {Level}";
             // 
+            // picBackExp
+            // 
+            this.picBackExp.Image = global::BlacksmithSimulator.Properties.Resources.back_bar;
+            this.picBackExp.Location = new System.Drawing.Point(7, 140);
+            this.picBackExp.Name = "picBackExp";
+            this.picBackExp.Size = new System.Drawing.Size(244, 20);
+            this.picBackExp.TabIndex = 8;
+            this.picBackExp.TabStop = false;
+            // 
+            // picBackSanity
+            // 
+            this.picBackSanity.Image = global::BlacksmithSimulator.Properties.Resources.back_bar;
+            this.picBackSanity.Location = new System.Drawing.Point(7, 94);
+            this.picBackSanity.Name = "picBackSanity";
+            this.picBackSanity.Size = new System.Drawing.Size(244, 20);
+            this.picBackSanity.TabIndex = 7;
+            this.picBackSanity.TabStop = false;
+            // 
+            // picBackHunger
+            // 
+            this.picBackHunger.Image = global::BlacksmithSimulator.Properties.Resources.back_bar;
+            this.picBackHunger.Location = new System.Drawing.Point(7, 48);
+            this.picBackHunger.Name = "picBackHunger";
+            this.picBackHunger.Size = new System.Drawing.Size(244, 20);
+            this.picBackHunger.TabIndex = 6;
+            this.picBackHunger.TabStop = false;
+            // 
+            // picExp
+            // 
+            this.picExp.Image = global::BlacksmithSimulator.Properties.Resources.exp_bar;
+            this.picExp.Location = new System.Drawing.Point(7, 140);
+            this.picExp.Name = "picExp";
+            this.picExp.Size = new System.Drawing.Size(244, 20);
+            this.picExp.TabIndex = 5;
+            this.picExp.TabStop = false;
+            // 
             // lblExp
             // 
             this.lblExp.BackColor = System.Drawing.Color.Transparent;
@@ -132,6 +168,15 @@
             this.lblExp.TabIndex = 4;
             this.lblExp.Text = "Exp: 99999/99999 (100%)";
             // 
+            // picHunger
+            // 
+            this.picHunger.Image = global::BlacksmithSimulator.Properties.Resources.hunger_bar_dark;
+            this.picHunger.Location = new System.Drawing.Point(7, 48);
+            this.picHunger.Name = "picHunger";
+            this.picHunger.Size = new System.Drawing.Size(244, 20);
+            this.picHunger.TabIndex = 3;
+            this.picHunger.TabStop = false;
+            // 
             // lblSanity
             // 
             this.lblSanity.BackColor = System.Drawing.Color.Transparent;
@@ -141,6 +186,15 @@
             this.lblSanity.Size = new System.Drawing.Size(244, 20);
             this.lblSanity.TabIndex = 1;
             this.lblSanity.Text = "Sanity: 9999/9999 (100%)";
+            // 
+            // picSanity
+            // 
+            this.picSanity.Image = global::BlacksmithSimulator.Properties.Resources.sanity_bar;
+            this.picSanity.Location = new System.Drawing.Point(7, 94);
+            this.picSanity.Name = "picSanity";
+            this.picSanity.Size = new System.Drawing.Size(244, 20);
+            this.picSanity.TabIndex = 2;
+            this.picSanity.TabStop = false;
             // 
             // lblHunger
             // 
@@ -188,27 +242,6 @@
             this.pMDI.Size = new System.Drawing.Size(407, 378);
             this.pMDI.TabIndex = 1;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.tableLayoutPanel2.ColumnCount = 5;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.btnSettings, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnAchievment, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnInventory, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnMap, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnQuests, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(372, 396);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(230, 46);
-            this.tableLayoutPanel2.TabIndex = 2;
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -230,126 +263,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Forge";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(399, 345);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Mine";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(187, 3);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(40, 40);
-            this.btnSettings.TabIndex = 4;
-            this.btnSettings.UseVisualStyleBackColor = true;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
-            // btnAchievment
-            // 
-            this.btnAchievment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAchievment.Image = global::BlacksmithSimulator.Properties.Resources.icons8_trophy_30;
-            this.btnAchievment.Location = new System.Drawing.Point(141, 3);
-            this.btnAchievment.Name = "btnAchievment";
-            this.btnAchievment.Size = new System.Drawing.Size(40, 40);
-            this.btnAchievment.TabIndex = 2;
-            this.btnAchievment.UseVisualStyleBackColor = true;
-            this.btnAchievment.Click += new System.EventHandler(this.btnAchievment_Click);
-            // 
-            // btnInventory
-            // 
-            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnInventory.Image = global::BlacksmithSimulator.Properties.Resources.icons8_backpack_30;
-            this.btnInventory.Location = new System.Drawing.Point(3, 3);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(40, 40);
-            this.btnInventory.TabIndex = 0;
-            this.btnInventory.UseVisualStyleBackColor = true;
-            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
-            // 
-            // btnMap
-            // 
-            this.btnMap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMap.Image = global::BlacksmithSimulator.Properties.Resources.icons8_map_30;
-            this.btnMap.Location = new System.Drawing.Point(95, 3);
-            this.btnMap.Name = "btnMap";
-            this.btnMap.Size = new System.Drawing.Size(40, 40);
-            this.btnMap.TabIndex = 1;
-            this.btnMap.UseVisualStyleBackColor = true;
-            this.btnMap.Click += new System.EventHandler(this.btnMap_Click);
-            // 
-            // btnQuests
-            // 
-            this.btnQuests.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnQuests.Image = global::BlacksmithSimulator.Properties.Resources.icons8_scroll_30;
-            this.btnQuests.Location = new System.Drawing.Point(49, 3);
-            this.btnQuests.Name = "btnQuests";
-            this.btnQuests.Size = new System.Drawing.Size(40, 40);
-            this.btnQuests.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.btnQuests, "Armory");
-            this.btnQuests.UseVisualStyleBackColor = true;
-            this.btnQuests.Click += new System.EventHandler(this.btnArmory_Click);
-            // 
-            // picBackExp
-            // 
-            this.picBackExp.Image = global::BlacksmithSimulator.Properties.Resources.back_bar;
-            this.picBackExp.Location = new System.Drawing.Point(7, 140);
-            this.picBackExp.Name = "picBackExp";
-            this.picBackExp.Size = new System.Drawing.Size(244, 20);
-            this.picBackExp.TabIndex = 8;
-            this.picBackExp.TabStop = false;
-            // 
-            // picBackSanity
-            // 
-            this.picBackSanity.Image = global::BlacksmithSimulator.Properties.Resources.back_bar;
-            this.picBackSanity.Location = new System.Drawing.Point(7, 94);
-            this.picBackSanity.Name = "picBackSanity";
-            this.picBackSanity.Size = new System.Drawing.Size(244, 20);
-            this.picBackSanity.TabIndex = 7;
-            this.picBackSanity.TabStop = false;
-            // 
-            // picBackHunger
-            // 
-            this.picBackHunger.Image = global::BlacksmithSimulator.Properties.Resources.back_bar;
-            this.picBackHunger.Location = new System.Drawing.Point(7, 48);
-            this.picBackHunger.Name = "picBackHunger";
-            this.picBackHunger.Size = new System.Drawing.Size(244, 20);
-            this.picBackHunger.TabIndex = 6;
-            this.picBackHunger.TabStop = false;
-            // 
-            // picExp
-            // 
-            this.picExp.Image = global::BlacksmithSimulator.Properties.Resources.exp_bar;
-            this.picExp.Location = new System.Drawing.Point(7, 140);
-            this.picExp.Name = "picExp";
-            this.picExp.Size = new System.Drawing.Size(244, 20);
-            this.picExp.TabIndex = 5;
-            this.picExp.TabStop = false;
-            // 
-            // picHunger
-            // 
-            this.picHunger.Image = global::BlacksmithSimulator.Properties.Resources.hunger_bar_dark;
-            this.picHunger.Location = new System.Drawing.Point(7, 48);
-            this.picHunger.Name = "picHunger";
-            this.picHunger.Size = new System.Drawing.Size(244, 20);
-            this.picHunger.TabIndex = 3;
-            this.picHunger.TabStop = false;
-            // 
-            // picSanity
-            // 
-            this.picSanity.Image = global::BlacksmithSimulator.Properties.Resources.sanity_bar;
-            this.picSanity.Location = new System.Drawing.Point(7, 94);
-            this.picSanity.Name = "picSanity";
-            this.picSanity.Size = new System.Drawing.Size(244, 20);
-            this.picSanity.TabIndex = 2;
-            this.picSanity.TabStop = false;
             // 
             // tableLayoutPanel3
             // 
@@ -456,6 +369,93 @@
             this.btnForge.Text = "Forge";
             this.btnForge.UseVisualStyleBackColor = true;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(399, 345);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Mine";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.btnSettings, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnAchievment, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnInventory, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnMap, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnQuests, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(372, 396);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(230, 46);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
+            this.btnSettings.Location = new System.Drawing.Point(187, 3);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(40, 40);
+            this.btnSettings.TabIndex = 4;
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // btnAchievment
+            // 
+            this.btnAchievment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAchievment.Image = global::BlacksmithSimulator.Properties.Resources.icons8_trophy_30;
+            this.btnAchievment.Location = new System.Drawing.Point(141, 3);
+            this.btnAchievment.Name = "btnAchievment";
+            this.btnAchievment.Size = new System.Drawing.Size(40, 40);
+            this.btnAchievment.TabIndex = 2;
+            this.btnAchievment.UseVisualStyleBackColor = true;
+            this.btnAchievment.Click += new System.EventHandler(this.btnAchievment_Click);
+            // 
+            // btnInventory
+            // 
+            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnInventory.Image = global::BlacksmithSimulator.Properties.Resources.icons8_backpack_30;
+            this.btnInventory.Location = new System.Drawing.Point(3, 3);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(40, 40);
+            this.btnInventory.TabIndex = 0;
+            this.btnInventory.UseVisualStyleBackColor = true;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
+            // 
+            // btnMap
+            // 
+            this.btnMap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMap.Image = global::BlacksmithSimulator.Properties.Resources.icons8_map_30;
+            this.btnMap.Location = new System.Drawing.Point(95, 3);
+            this.btnMap.Name = "btnMap";
+            this.btnMap.Size = new System.Drawing.Size(40, 40);
+            this.btnMap.TabIndex = 1;
+            this.btnMap.UseVisualStyleBackColor = true;
+            this.btnMap.Click += new System.EventHandler(this.btnMap_Click);
+            // 
+            // btnQuests
+            // 
+            this.btnQuests.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnQuests.Image = global::BlacksmithSimulator.Properties.Resources.icons8_scroll_30;
+            this.btnQuests.Location = new System.Drawing.Point(49, 3);
+            this.btnQuests.Name = "btnQuests";
+            this.btnQuests.Size = new System.Drawing.Size(40, 40);
+            this.btnQuests.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btnQuests, "Armory");
+            this.btnQuests.UseVisualStyleBackColor = true;
+            this.btnQuests.Click += new System.EventHandler(this.btnArmory_Click);
+            // 
             // FrmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -473,19 +473,19 @@
             this.Text = "FrmGame";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmGame_KeyDown);
             this.gbStats.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.pMDI.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBackExp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBackSanity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBackHunger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHunger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSanity)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.pMDI.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.gpForge.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static BlacksmithSimulator.XmlManager;
 
 namespace BlacksmithSimulator
 {
@@ -14,16 +16,32 @@ namespace BlacksmithSimulator
     {
         Form activeForm = null;
         Player p;
+        ItemList ilist;
+        Config cfg;
+
         public FrmGame()
         {
             InitializeComponent();
             LoadToolTips();
             p = new Player();
+            cfg = new Config();
+            ilist = new ItemList();
 
+            cfg.DetachWindows = true;
+            cfg.AllowMultipleWindows = true;
+
+
+            if (!File.Exists("ItemList.xml") || !File.Exists("MaterialList.xml"))
+                SaveFiles();
             picHunger.BringToFront();
             picSanity.BringToFront();
             picExp.BringToFront();
             UpdateValues();
+        }
+
+        private void SaveFiles()
+        {
+            XmlDataWriter(ilist, "ItemList.xml");
         }
         private void OpenChildForm(Form childForm)
         {
@@ -46,6 +64,7 @@ namespace BlacksmithSimulator
             childForm.BringToFront();
             childForm.Show();
         }
+
         private void LoadToolTips()
         {
             toolTip1.SetToolTip(btnInventory, "Inventory");
@@ -82,8 +101,8 @@ namespace BlacksmithSimulator
                         btnSettings.PerformClick();
                     break;
             }
-
         }
+
         private void btnInventory_Click(object sender, EventArgs e) => OpenChildForm(new FrmInventory());
 
         private void btnArmory_Click(object sender, EventArgs e) => OpenChildForm(new FrmArmory());

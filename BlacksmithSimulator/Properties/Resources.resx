@@ -118,14 +118,29 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="exp_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\exp_bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-map-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\icons8-map-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-trophy-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\icons8-trophy-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="armort_silhouette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\armort_silhouette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="item_slot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\item_slot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-trash-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\icons8-trash-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sanity_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\sanity_bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="back_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\back_bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hunger_bar_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\hunger_bar_dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-body-armor-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\icons8-body-armor-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-settings-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\icons8-settings-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,28 +148,22 @@
   <data name="icons8-backpack-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\icons8-backpack-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="item_slot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\item_slot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exp_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\exp_bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-scroll-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\icons8-scroll-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-trash-26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\icons8-trash-26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hunger_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\hunger_bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="armort_silhouette" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\armort_silhouette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hunger_bar_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\hunger_bar_dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sanity_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\sanity_bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-body-armor-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\icons8-body-armor-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-trophy-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\icons8-trophy-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-map-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\icons8-map-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-scroll-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\icons8-scroll-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-money-bag-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\icons8-money-bag-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
