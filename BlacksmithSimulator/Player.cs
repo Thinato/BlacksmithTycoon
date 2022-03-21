@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace BlacksmithSimulator
 {
     public class Player
     {
+        public string Name { get; set; }
+        public int Gold { get; set; }
         public int Hunger { get; set; }
         public int HungerMax { get; set; }
         public int Sanity { get; set; }
@@ -16,24 +19,35 @@ namespace BlacksmithSimulator
         public int StorageMax { get; set; }
         public int Exp { get; set; }
         public int ExpMax { get; set; }
-        public int ExpDiff { get; set; }    
+        public int ExpDiff { get; set; }
         
         public int Level { get; set; }
         
         public Dictionary<Person, int> Relationships { get; set; }
-        public Dictionary<Item, int> Inventory { get; set; }
+
+        public DataTable DataItems;
+        public DataTable DataInventory;
 
         // Additional stats
         public int Blacksmithing { get; set; }
         public int Mining { get; set; }
         public int Luck { get; set; }
+        public int LevelPoints { get; set; }
+        public bool IsMining { get; set; }
 
-        public enum Ability
+        public enum Ore
         {
-            Blacksmithing,
-            Mining,
-            Level
+            Copper,
+            Tin,
+            Iron,
+            Silver,
+            Gold,
+            Platinum,
+            Mithril,
+            Orichalcum,
+            Meteorite
         }
+
 
         public Player()
         {
@@ -51,28 +65,33 @@ namespace BlacksmithSimulator
             ExpMax = 100;
             ExpDiff = 150;
 
+            DataInventory = new DataTable();
+            DataItems = new DataTable();
+
         }
-        public void LevelUp(Ability ability)
+        public void LevelUp()
         {
             Level++;
             Exp -= ExpMax;
             ExpDiff += 50 + Convert.ToInt32(ExpMax * .05);
             ExpMax += ExpDiff;
+            LevelPoints++;
         }
-        public void GainExp(Ability ability, int quantity)
+        public string GainExp( int baseValue)
         {
-            switch (ability)
+            if (baseValue < 4)
+                throw new ArgumentException();
+            Random rand = new Random();
+            int value = rand.Next(baseValue - 4, baseValue + 4);
+            Exp += value;
+            if (Exp >= ExpMax)
             {
-                case Ability.Blacksmithing:
-                    break;
-                case Ability.Mining:
-                    break;
-                case Ability.Level:
-                    Exp += quantity;
-                    if (Exp >= ExpMax)
-                        LevelUp(Ability.Level);
-                    break;
+                LevelUp();
+                return $"+{value} EXP\nLevel Up!\nYou reached level {Level}!\n" ;
             }
+              
+            return $"+{value} EXP\n";
+
         }
     }
 }
