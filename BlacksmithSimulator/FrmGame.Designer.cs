@@ -81,13 +81,10 @@
             this.listItemForgeIngredients = new System.Windows.Forms.ListBox();
             this.btnForge = new System.Windows.Forms.Button();
             this.tabMine = new System.Windows.Forms.TabPage();
+            this.lblMineMining = new System.Windows.Forms.Label();
             this.progMine = new System.Windows.Forms.ProgressBar();
             this.lblMineTime = new System.Windows.Forms.Label();
             this.tableMine = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnMinePlatinum = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnMineMithril = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnMineGold = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -96,6 +93,16 @@
             this.btnMineCopper = new System.Windows.Forms.Button();
             this.gbMineTin = new System.Windows.Forms.GroupBox();
             this.btnMineTin = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnMineMeteorite = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnMineOrichalcum = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnMinePlatinum = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnMineMithril = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btnMineSilver = new System.Windows.Forms.Button();
             this.tabMiners = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSettings = new System.Windows.Forms.Button();
@@ -107,13 +114,6 @@
             this.timerUpdate = new System.Windows.Forms.Timer(this.components);
             this.timerSaveGame = new System.Windows.Forms.Timer(this.components);
             this.timerMine = new System.Windows.Forms.Timer(this.components);
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.btnMineMeteorite = new System.Windows.Forms.Button();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnMineOrichalcum = new System.Windows.Forms.Button();
-            this.lblMineMining = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.btnMineSilver = new System.Windows.Forms.Button();
             this.gbStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBackExp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBackSanity)).BeginInit();
@@ -129,16 +129,16 @@
             this.gpForge.SuspendLayout();
             this.tabMine.SuspendLayout();
             this.tableMine.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbMineCopper.SuspendLayout();
             this.gbMineTin.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbStats
@@ -457,6 +457,17 @@
             this.tabMine.Text = "Mine";
             this.tabMine.UseVisualStyleBackColor = true;
             // 
+            // lblMineMining
+            // 
+            this.lblMineMining.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMineMining.Location = new System.Drawing.Point(6, 366);
+            this.lblMineMining.Name = "lblMineMining";
+            this.lblMineMining.Size = new System.Drawing.Size(339, 18);
+            this.lblMineMining.TabIndex = 5;
+            this.lblMineMining.Text = "{Currently Mining}";
+            this.lblMineMining.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // progMine
             // 
             this.progMine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -504,52 +515,6 @@
             this.tableMine.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableMine.Size = new System.Drawing.Size(427, 331);
             this.tableMine.TabIndex = 4;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.btnMinePlatinum);
-            this.groupBox4.Location = new System.Drawing.Point(216, 135);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(208, 60);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Platinum Vein";
-            // 
-            // btnMinePlatinum
-            // 
-            this.btnMinePlatinum.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMinePlatinum.Location = new System.Drawing.Point(3, 23);
-            this.btnMinePlatinum.Name = "btnMinePlatinum";
-            this.btnMinePlatinum.Size = new System.Drawing.Size(202, 34);
-            this.btnMinePlatinum.TabIndex = 1;
-            this.btnMinePlatinum.Text = "Mine";
-            this.btnMinePlatinum.UseVisualStyleBackColor = true;
-            this.btnMinePlatinum.Click += new System.EventHandler(this.btnMinePlatinum_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.btnMineMithril);
-            this.groupBox3.Location = new System.Drawing.Point(3, 201);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(207, 60);
-            this.groupBox3.TabIndex = 5;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Mithril Vein";
-            // 
-            // btnMineMithril
-            // 
-            this.btnMineMithril.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMineMithril.Location = new System.Drawing.Point(3, 23);
-            this.btnMineMithril.Name = "btnMineMithril";
-            this.btnMineMithril.Size = new System.Drawing.Size(201, 34);
-            this.btnMineMithril.TabIndex = 1;
-            this.btnMineMithril.Text = "Mine";
-            this.btnMineMithril.UseVisualStyleBackColor = true;
-            this.btnMineMithril.Click += new System.EventHandler(this.btnMineMithril_Click);
             // 
             // groupBox2
             // 
@@ -643,12 +608,127 @@
             this.btnMineTin.UseVisualStyleBackColor = true;
             this.btnMineTin.Click += new System.EventHandler(this.btnMineTin_Click);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.btnMineMeteorite);
+            this.groupBox5.Location = new System.Drawing.Point(3, 267);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(207, 60);
+            this.groupBox5.TabIndex = 7;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Meteorite Fragments";
+            // 
+            // btnMineMeteorite
+            // 
+            this.btnMineMeteorite.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMineMeteorite.Location = new System.Drawing.Point(3, 23);
+            this.btnMineMeteorite.Name = "btnMineMeteorite";
+            this.btnMineMeteorite.Size = new System.Drawing.Size(201, 34);
+            this.btnMineMeteorite.TabIndex = 1;
+            this.btnMineMeteorite.Text = "Mine";
+            this.btnMineMeteorite.UseVisualStyleBackColor = true;
+            this.btnMineMeteorite.Click += new System.EventHandler(this.btnMineMeteorite_Click);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox6.Controls.Add(this.btnMineOrichalcum);
+            this.groupBox6.Location = new System.Drawing.Point(216, 201);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(208, 60);
+            this.groupBox6.TabIndex = 8;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Orichalcum Vein";
+            // 
+            // btnMineOrichalcum
+            // 
+            this.btnMineOrichalcum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMineOrichalcum.Location = new System.Drawing.Point(3, 23);
+            this.btnMineOrichalcum.Name = "btnMineOrichalcum";
+            this.btnMineOrichalcum.Size = new System.Drawing.Size(202, 34);
+            this.btnMineOrichalcum.TabIndex = 1;
+            this.btnMineOrichalcum.Text = "Mine";
+            this.btnMineOrichalcum.UseVisualStyleBackColor = true;
+            this.btnMineOrichalcum.Click += new System.EventHandler(this.btnMineOrichalcum_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.btnMinePlatinum);
+            this.groupBox4.Location = new System.Drawing.Point(216, 135);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(208, 60);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Platinum Vein";
+            // 
+            // btnMinePlatinum
+            // 
+            this.btnMinePlatinum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMinePlatinum.Location = new System.Drawing.Point(3, 23);
+            this.btnMinePlatinum.Name = "btnMinePlatinum";
+            this.btnMinePlatinum.Size = new System.Drawing.Size(202, 34);
+            this.btnMinePlatinum.TabIndex = 1;
+            this.btnMinePlatinum.Text = "Mine";
+            this.btnMinePlatinum.UseVisualStyleBackColor = true;
+            this.btnMinePlatinum.Click += new System.EventHandler(this.btnMinePlatinum_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.btnMineMithril);
+            this.groupBox3.Location = new System.Drawing.Point(3, 201);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(207, 60);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Mithril Vein";
+            // 
+            // btnMineMithril
+            // 
+            this.btnMineMithril.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMineMithril.Location = new System.Drawing.Point(3, 23);
+            this.btnMineMithril.Name = "btnMineMithril";
+            this.btnMineMithril.Size = new System.Drawing.Size(201, 34);
+            this.btnMineMithril.TabIndex = 1;
+            this.btnMineMithril.Text = "Mine";
+            this.btnMineMithril.UseVisualStyleBackColor = true;
+            this.btnMineMithril.Click += new System.EventHandler(this.btnMineMithril_Click);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox7.Controls.Add(this.btnMineSilver);
+            this.groupBox7.Location = new System.Drawing.Point(3, 135);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(207, 60);
+            this.groupBox7.TabIndex = 9;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Silver Vein";
+            // 
+            // btnMineSilver
+            // 
+            this.btnMineSilver.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMineSilver.Location = new System.Drawing.Point(3, 23);
+            this.btnMineSilver.Name = "btnMineSilver";
+            this.btnMineSilver.Size = new System.Drawing.Size(201, 34);
+            this.btnMineSilver.TabIndex = 1;
+            this.btnMineSilver.Text = "Mine";
+            this.btnMineSilver.UseVisualStyleBackColor = true;
+            this.btnMineSilver.Click += new System.EventHandler(this.btnMineSilver_Click);
+            // 
             // tabMiners
             // 
             this.tabMiners.Location = new System.Drawing.Point(4, 29);
             this.tabMiners.Name = "tabMiners";
             this.tabMiners.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMiners.Size = new System.Drawing.Size(431, 339);
+            this.tabMiners.Size = new System.Drawing.Size(439, 409);
             this.tabMiners.TabIndex = 2;
             this.tabMiners.Text = "Miners";
             this.tabMiners.UseVisualStyleBackColor = true;
@@ -746,85 +826,6 @@
             this.timerMine.Interval = 500;
             this.timerMine.Tick += new System.EventHandler(this.timerMine_Tick);
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.btnMineMeteorite);
-            this.groupBox5.Location = new System.Drawing.Point(3, 267);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(207, 60);
-            this.groupBox5.TabIndex = 7;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Meteorite Fragments";
-            // 
-            // btnMineMeteorite
-            // 
-            this.btnMineMeteorite.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMineMeteorite.Location = new System.Drawing.Point(3, 23);
-            this.btnMineMeteorite.Name = "btnMineMeteorite";
-            this.btnMineMeteorite.Size = new System.Drawing.Size(201, 34);
-            this.btnMineMeteorite.TabIndex = 1;
-            this.btnMineMeteorite.Text = "Mine";
-            this.btnMineMeteorite.UseVisualStyleBackColor = true;
-            this.btnMineMeteorite.Click += new System.EventHandler(this.btnMineMeteorite_Click);
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox6.Controls.Add(this.btnMineOrichalcum);
-            this.groupBox6.Location = new System.Drawing.Point(216, 201);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(208, 60);
-            this.groupBox6.TabIndex = 8;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Orichalcum Vein";
-            // 
-            // btnMineOrichalcum
-            // 
-            this.btnMineOrichalcum.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMineOrichalcum.Location = new System.Drawing.Point(3, 23);
-            this.btnMineOrichalcum.Name = "btnMineOrichalcum";
-            this.btnMineOrichalcum.Size = new System.Drawing.Size(202, 34);
-            this.btnMineOrichalcum.TabIndex = 1;
-            this.btnMineOrichalcum.Text = "Mine";
-            this.btnMineOrichalcum.UseVisualStyleBackColor = true;
-            this.btnMineOrichalcum.Click += new System.EventHandler(this.btnMineOrichalcum_Click);
-            // 
-            // lblMineMining
-            // 
-            this.lblMineMining.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMineMining.Location = new System.Drawing.Point(6, 366);
-            this.lblMineMining.Name = "lblMineMining";
-            this.lblMineMining.Size = new System.Drawing.Size(339, 18);
-            this.lblMineMining.TabIndex = 5;
-            this.lblMineMining.Text = "{Currently Mining}";
-            this.lblMineMining.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox7.Controls.Add(this.btnMineSilver);
-            this.groupBox7.Location = new System.Drawing.Point(3, 135);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(207, 60);
-            this.groupBox7.TabIndex = 9;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Silver Vein";
-            // 
-            // btnMineSilver
-            // 
-            this.btnMineSilver.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMineSilver.Location = new System.Drawing.Point(3, 23);
-            this.btnMineSilver.Name = "btnMineSilver";
-            this.btnMineSilver.Size = new System.Drawing.Size(201, 34);
-            this.btnMineSilver.TabIndex = 1;
-            this.btnMineSilver.Text = "Mine";
-            this.btnMineSilver.UseVisualStyleBackColor = true;
-            // 
             // FrmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -857,16 +858,16 @@
             this.gpForge.ResumeLayout(false);
             this.tabMine.ResumeLayout(false);
             this.tableMine.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.gbMineCopper.ResumeLayout(false);
             this.gbMineTin.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

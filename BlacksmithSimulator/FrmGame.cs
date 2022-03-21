@@ -69,7 +69,7 @@ namespace BlacksmithSimulator
             p.Exp =         Convert.ToInt32(dt.Rows[0].Field<Int64>(8));
             p.ExpMax =      Convert.ToInt32(dt.Rows[0].Field<Int64>(9));
             p.ExpDiff =     Convert.ToInt32(dt.Rows[0].Field<Int64>(10));
-            p.Blacksmithing = Convert.ToInt32(dt.Rows[0].Field<Int64>(11));
+            p.Blacksmithing=Convert.ToInt32(dt.Rows[0].Field<Int64>(11));
             p.Mining =      Convert.ToInt32(dt.Rows[0].Field<Int64>(12));
            // p.Name =        dt.Rows[0].Field<string>(1);
         }
@@ -132,11 +132,11 @@ namespace BlacksmithSimulator
 
         private void LoadToolTips()
         {
-            toolTip1.SetToolTip(btnInventory, "Inventory");
-            toolTip1.SetToolTip(btnQuests, "Quests");
-            toolTip1.SetToolTip(btnMap, "Map");
-            toolTip1.SetToolTip(btnAchievment, "Achievments");
-            toolTip1.SetToolTip(btnSettings, "Settings");
+            toolTip1.SetToolTip(btnInventory, "Inventory (B)");
+            toolTip1.SetToolTip(btnQuests, "Quests (J)");
+            toolTip1.SetToolTip(btnMap, "Map (M)");
+            toolTip1.SetToolTip(btnAchievment, "Achievments (Y)");
+            toolTip1.SetToolTip(btnSettings, "Settings (Esc)");
         }
 
         
@@ -153,7 +153,7 @@ namespace BlacksmithSimulator
                 case Keys.Y:
                     btnAchievment.PerformClick();
                     break;
-                case Keys.C:
+                case Keys.J:
                     btnQuests.PerformClick();
                     break;
                 case Keys.Escape:
@@ -219,14 +219,19 @@ namespace BlacksmithSimulator
             ((Control)tabForge).Enabled = false;
             
             mining = ore;
-
-            mineTime = p.DataItems.Rows[0].Field<Int64>(6);
+            DataRow[] result;
+            if (ore == Ore.Meteorite)
+                result = p.DataItems.Select($"ID=25");
+            else
+                result = p.DataItems.Select($"NAME='{ore} ore'");
+            mineTime = result[0].Field<Int64>(6) * 5;
+            //mineTime = p.DataItems.Rows[0].Field<Int64>(6) * 5;
             progMine.Maximum = Convert.ToInt32(mineTime * 2);
 
             btnMineCopper.Enabled = false;
             btnMineTin.Enabled = false;
             btnMineIron.Enabled = false;
-            //btnMineSilver.Enabled = false;
+            btnMineSilver.Enabled = false;
             btnMineGold.Enabled = false;
             btnMinePlatinum.Enabled = false;
             btnMineMithril.Enabled = false;
@@ -246,6 +251,8 @@ namespace BlacksmithSimulator
         private void btnMineTin_Click(object sender, EventArgs e) => MineOre(Ore.Tin);
 
         private void btnMineIron_Click(object sender, EventArgs e) => MineOre(Ore.Iron);
+
+        private void btnMineSilver_Click(object sender, EventArgs e) => MineOre(Ore.Silver);
 
         private void btnMineGold_Click(object sender, EventArgs e) => MineOre(Ore.Gold);
 
@@ -301,13 +308,22 @@ namespace BlacksmithSimulator
         }
         private void OreMined(Ore ore)
         {
+            btnMineCopper.Enabled = true;
+            btnMineTin.Enabled = true;
+            btnMineIron.Enabled = true;
+            btnMineSilver.Enabled = true;
+            btnMineGold.Enabled = true;
+            btnMinePlatinum.Enabled = true;
+            btnMineMithril.Enabled = true;
+            btnMineOrichalcum.Enabled = true;
+            btnMineMeteorite.Enabled = true;
 
             ((Control)tabForge).Enabled = true;
-
+            string query = "INSERT INTO Inventory (PLAYER_ID, ITEM_ID, ITEM, QUANTITY) ";
             switch (ore)
             {
                 case Ore.Copper:
-
+                    query += "VALUES (1, 1, 'Copper Ore')";
                     txtLog.Text += p.GainExp(6);
                     break;
                 case Ore.Tin:
@@ -343,5 +359,6 @@ namespace BlacksmithSimulator
             txtLog.Select(txtLog.TextLength + 1, 0);
             txtLog.ScrollToCaret();
         }
+
     }
 }
