@@ -16,7 +16,7 @@ namespace BlacksmithSimulator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmGame(1));
+            Application.Run(new FrmMenu());
         }
     }
 }

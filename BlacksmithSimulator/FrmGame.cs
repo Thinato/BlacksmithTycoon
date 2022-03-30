@@ -80,7 +80,7 @@ namespace BlacksmithSimulator
             SQLiteDataAdapter data = new SQLiteDataAdapter(query, c.conn);
             data.Fill(p.DataItems);
 
-            data.SelectCommand.CommandText = "select ITEM as Item, QUANTITY as Qty from Inventory where PLAYER_ID=" + PlayerID + ';';
+            data.SelectCommand.CommandText = "select ITEM_ID, ITEM as Item, QUANTITY as Qty from Inventory where PLAYER_ID=" + PlayerID + ';';
             data.Fill(p.DataInventory);
 
 
@@ -274,6 +274,7 @@ namespace BlacksmithSimulator
 
         private void SaveGame()
         {
+            //update player where id =playerID
             
         }
 
@@ -306,6 +307,11 @@ namespace BlacksmithSimulator
             progMine.PerformStep();
 
         }
+        private void AddItem(int ItemID)
+        {
+            string query = "UPDATE Inventory SET QUANTITY = QUANTITY + 1 WHERE ITEM_ID=" + ItemID + " AND PLAYER_ID=" + PlayerID + ';';
+
+        }
         private void OreMined(Ore ore)
         {
             btnMineCopper.Enabled = true;
@@ -319,35 +325,43 @@ namespace BlacksmithSimulator
             btnMineMeteorite.Enabled = true;
 
             ((Control)tabForge).Enabled = true;
-            string query = "INSERT INTO Inventory (PLAYER_ID, ITEM_ID, ITEM, QUANTITY) ";
+
             switch (ore)
             {
                 case Ore.Copper:
-                    query += "VALUES (1, 1, 'Copper Ore')";
+                    AddItem(1);
                     txtLog.Text += p.GainExp(6);
                     break;
                 case Ore.Tin:
+                    AddItem(3);
                     txtLog.Text += p.GainExp(10);
                     break;
                 case Ore.Iron:
+                    AddItem(6);
                     txtLog.Text += p.GainExp(32);
                     break;
                 case Ore.Silver:
+                    AddItem(8);
                     txtLog.Text += p.GainExp(55);
                     break;
                 case Ore.Gold:
+                    AddItem(11);
                     txtLog.Text += p.GainExp(80);
                     break;
                 case Ore.Platinum:
+                    AddItem(13);
                     txtLog.Text += p.GainExp(145);
                     break;
                 case Ore.Mithril:
+                    AddItem(15);
                     txtLog.Text += p.GainExp(210);
                     break;
                 case Ore.Orichalcum:
+                    AddItem(19);
                     txtLog.Text += p.GainExp(290);
                     break;
                 case Ore.Meteorite:
+                    AddItem(25);
                     txtLog.Text += p.GainExp(300);
                     break;
             }

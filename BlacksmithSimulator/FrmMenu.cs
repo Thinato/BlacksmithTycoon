@@ -16,5 +16,10 @@ namespace BlacksmithSimulator
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NewPlayer.Create(textBox1.Text.Trim());
+        }
     }
 }
